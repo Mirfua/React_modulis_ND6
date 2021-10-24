@@ -103,16 +103,17 @@ function App() {
                     <option value={2}>Field Two</option>
                     <option value={3}>Field Three</option>
                 </select>
-                <div className="buttons-holder">
-                    <span> Total "cows": </span>
-                    <span> Total "sheeps": </span>
-                    <span> Total "horses": </span>
-                    </div>
+
             </div>
             <div className="buttons-holder">
                 <button onClick={() => groupGoHome('cow')}>Kill cows</button>
                 <button onClick={() => groupGoHome('sheep')}>Kill sheeps</button>
                 <button onClick={() => groupGoHome('horse')}>Kill horses</button>
+            </div>
+            <div className="buttons-holder">
+                <span> All "cows": </span>
+                <span> All "sheeps": </span>
+                <span> All "horses": </span>
             </div>
         </>
     );
