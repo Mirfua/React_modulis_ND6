@@ -14,12 +14,12 @@ function FieldAnimal({ fieldAnimal, field, goHome, setWeight }) {
         return (
             <div className="cow">
                 <form className="div" onSubmit={(e) => setWeight(e, fieldAnimal.id, input)}>
-                    <button type="submit">Svoris:</button>
+                    <button type="submit">Set weight:</button>
                     <input onChange={(e) => Change(e)} className="input" type="text"/>
                 </form>
                 <h2>{fieldAnimal.id}</h2>
                 <span style={{ color: fieldAnimal.weight > 100 ? "red" : "black" }}>Svoris: {fieldAnimal.weight}</span>                
-                <button onClick={() => goHome(fieldAnimal.id)}>Go home</button>
+                <button onClick={() => goHome(fieldAnimal.id)}>Kill</button>
             </div>
         );
     }
@@ -27,12 +27,12 @@ function FieldAnimal({ fieldAnimal, field, goHome, setWeight }) {
         return (
             <div className="sheep">
                 <form className="div" onSubmit={(e) => setWeight(e, fieldAnimal.id, input)}>
-                    <button type="submit">Svoris:</button>
+                    <button type="submit">Set weight:</button>
                     <input onChange={(e) => Change(e)}className="input" type="text"/>
                 </form>
                 <h2>{fieldAnimal.id}</h2>
                 <span style={{ color: fieldAnimal.weight > 100 ? "red" : "black" }}>Svoris: {fieldAnimal.weight}</span>                
-                <button onClick={() => goHome(fieldAnimal.id)}>Go home</button>
+                <button onClick={() => goHome(fieldAnimal.id)}>Kill</button>
             </div>
         );
     }
@@ -40,12 +40,12 @@ function FieldAnimal({ fieldAnimal, field, goHome, setWeight }) {
         return (
             <div className="horse">
                 <form className="div" onSubmit={(e) => setWeight(e, fieldAnimal.id, input)}>
-                    <button type="submit">svoris:</button>
+                    <button type="submit">Set weight:</button>
                     <input onChange={(e) => Change(e)} className="input" type="text"/>
                 </form>
                 <h2>{fieldAnimal.id}</h2>
                 <span style={{ color: fieldAnimal.weight > 100 ? "red" : "black" }}>Svoris: {fieldAnimal.weight}</span>                
-                <button onClick={() => goHome(fieldAnimal.id)}>Go home</button>
+                <button onClick={() => goHome(fieldAnimal.id)}>Kill</button>
             </div>
         );
     }

@@ -4,7 +4,7 @@ import idGenerator from "./Common/idGenerator";
 
 
 function App() {
-    
+
     const [field, setField] = useState([]);
     const [fieldNamber, setFieldNamber] = useState(1);
 
@@ -110,9 +110,9 @@ function App() {
                     </div>
             </div>
             <div className="buttons-holder">
-                <button onClick={() => groupGoHome('cow')}>Go cows</button>
-                <button onClick={() => groupGoHome('sheep')}>Go sheeps</button>
-                <button onClick={() => groupGoHome('horse')}>Go horses</button>
+                <button onClick={() => groupGoHome('cow')}>Kill cows</button>
+                <button onClick={() => groupGoHome('sheep')}>Kill sheeps</button>
+                <button onClick={() => groupGoHome('horse')}>Kill horses</button>
             </div>
         </>
     );
