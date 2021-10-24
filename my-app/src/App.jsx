@@ -4,7 +4,7 @@ import idGenerator from "./Common/idGenerator";
 
 
 function App() {
-
+    
     const [field, setField] = useState([]);
     const [fieldNamber, setFieldNamber] = useState(1);
 
@@ -51,19 +51,47 @@ function App() {
         }
     }, []);
 
+    const setWeight = (e, id, svoris) => {
+        const fieldCopy = field.slice();
+    
+        e.preventDefault();
+        console.log(fieldCopy);
 
+        let weight = svoris;
+        let curr = fieldCopy.find((el) => el.id === id);
+        let test = { ...curr, weight };
+        const ind = fieldCopy.findIndex((e) => e.id === id);
+        
+        fieldCopy.splice(ind, 1, test);
+        setField(fieldCopy);
+        localStorage.setItem("animals", JSON.stringify(fieldCopy));
+      };
+    
+      const stats = () => {
+        const fieldCopy = field.slice();
+        
+        console.log(fieldCopy);
+        
+        fieldCopy.forEach((element) => {
+          console.log(element);
+          if (element.animal === "cow") {
+            console.log(element.animal);
+          }
+        });
+      };
+      stats();
 
     return (
         <>
             <div className="field">
                 <div className="field__part">
-                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={1} fieldAnimal={fieldAnimal} goHome={goHome}></FieldAnimal>)}
+                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={1} fieldAnimal={fieldAnimal} goHome={goHome} setWeight={setWeight}></FieldAnimal>)}
                 </div>
                 <div className="field__part">
-                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={2} fieldAnimal={fieldAnimal} goHome={goHome}></FieldAnimal>)}
+                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={2} fieldAnimal={fieldAnimal} goHome={goHome} setWeight={setWeight}></FieldAnimal>)}
                 </div>
                 <div className="field__part">
-                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={3} fieldAnimal={fieldAnimal} goHome={goHome}></FieldAnimal>)}
+                    {field.map((fieldAnimal, i) => <FieldAnimal key={i} field={3} fieldAnimal={fieldAnimal} goHome={goHome} setWeight={setWeight}></FieldAnimal>)}
                 </div>
             </div>
             <div className="buttons-holder">
@@ -75,6 +103,11 @@ function App() {
                     <option value={2}>Field Two</option>
                     <option value={3}>Field Three</option>
                 </select>
+                <div className="buttons-holder">
+                    <span> Total "cows": </span>
+                    <span> Total "sheeps": </span>
+                    <span> Total "horses": </span>
+                    </div>
             </div>
             <div className="buttons-holder">
                 <button onClick={() => groupGoHome('cow')}>Go cows</button>
