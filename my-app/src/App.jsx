@@ -110,11 +110,6 @@ function App() {
                 <button onClick={() => groupGoHome('sheep')}>Kill sheeps</button>
                 <button onClick={() => groupGoHome('horse')}>Kill horses</button>
             </div>
-            <div className="buttons-holder">
-                <span> All "cows": </span>
-                <span> All "sheeps": </span>
-                <span> All "horses": </span>
-            </div>
         </>
     );
 
@@ -129,8 +124,12 @@ export default App;
 
 // ND: 
 //  kiekvienas galvijas privalo turėti po laukelį svorio įvedimui ir mygtuką, kurį paspaudus
-//  tas svoris būtų priskiriamas galvijui. Pradinis svoris yra 0 kg. Svoris kiekviename galvijaus
-//  atvaizde turi būti aiškai matomas. Svoris didesnis nei 100 turi būti atvaizduojamas kitaip
-//  (raudonai) nei mažesnis svoris. Bonus Extra Plus: Jeigu gyvulys viršija 200 svorio jis
-//  automatiškais go home, Viršuje statistikos komponentas skaičiuoja visus gyvulius bendrai,
-//  kiekvieną rūšį atskirai ir bendrą visos bandos svorį.
+//  tas svoris būtų priskiriamas galvijui. 
+
+//  Pradinis svoris yra 0 kg. Svoris kiekviename galvijaus atvaizde turi būti aiškai matomas.
+//  Svoris didesnis nei 100 turi būti atvaizduojamas kitaip (raudonai) nei mažesnis svoris. 
+
+
+//  Bonus Extra Plus: Jeigu gyvulys viršija 200 svorio jis automatiškais go home, Viršuje 
+//  statistikos komponentas skaičiuoja visus gyvulius bendrai, kiekvieną rūšį atskirai 
+//  ir bendrą visos bandos svorį.
