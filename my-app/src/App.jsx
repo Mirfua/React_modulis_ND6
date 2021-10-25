@@ -96,21 +96,21 @@ function App() {
                     All animals: {allAnimals.current}
                 </div>
                 <div className="stats">
-                    Total: {total.current}
+                    Total weight: {total.current}
                 </div>
                 <div className="stats">
-                    Cows: {types.current.cow}
+                    Total cows: {types.current.cow}
                 </div>
                 <div className="stats">
-                    Sheeps: {types.current.sheep}
+                    Total sheeps: {types.current.sheep}
                 </div>
                 <div className="stats">
-                    Horses: {types.current.horse}
+                    Total horses: {types.current.horse}
                 </div>
             <div className="buttons-holder">
-                <button onClick={() => groupGoHome('cow')}>Go cows</button>
-                <button onClick={() => groupGoHome('sheep')}>Go sheeps</button>
-                <button onClick={() => groupGoHome('horse')}>Go horses</button>
+                <button onClick={() => groupGoHome('cow')}>Kill all cows</button>
+                <button onClick={() => groupGoHome('sheep')}>Kill all sheeps</button>
+                <button onClick={() => groupGoHome('horse')}>Kill all horses</button>
             </div>
             </div>
             <div className="field">
@@ -126,19 +126,19 @@ function App() {
             </div>
             <div className="new">
                 <h2>Create new animal</h2>
-                <span>Field No.</span>
+                <span>Choise field:</span>
                 <select value={fieldNamber} onChange={selectField}>
-                    <option value={1}>Field One</option>
-                    <option value={2}>Field Two</option>
-                    <option value={3}>Field Three</option>
+                    <option value={1}>First field</option>
+                    <option value={2}>Second field</option>
+                    <option value={3}>Third field</option>
                 </select>
-                <span>Animal type</span>
+                <span>Chose animal type:</span>
                 <select value={fieldType} onChange={selectfieldType}>
                     <option value={'cow'}>Cow</option>
                     <option value={'sheep'}>Sheep</option>
                     <option value={'horse'}>Horse</option>
                 </select>
-                <span>Animal weight</span>
+                <span>Set animal weight:</span>
                 <input type="text" onChange={handleWeight} value={weight} />
                 <button onClick={add}>Add new animal</button>
             </div>
