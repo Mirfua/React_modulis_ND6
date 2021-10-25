@@ -15,8 +15,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: blue;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin: 20px;
 }
 
@@ -25,8 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: red;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin: 20px;
 }
@@ -79,14 +79,15 @@ h1 {
 button {
     display: block;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-weight: 550;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: .65em;
+    font-size: .75em;
     letter-spacing: 1px;
-    height: 35px;
-    line-height: 35px;
+    height: 38px;
+    width: 120px;
+    line-height: 38px;
     overflow: hidden;
-    background: #7e9b16;
+    background: #4dbecf;
     border-radius: 3px;
     box-shadow: 0 15px 30px rgba(black, .1);
     border: 0;
@@ -197,7 +198,7 @@ button {
     justify-content: flex-start;
     align-items: flex-start;
     &__part {
-        background-color: rgb(20, 74, 20);
+        background-color: lightgreen;
         margin: 20px;
         display: flex;
         justify-content: flex-start;
@@ -208,10 +209,10 @@ button {
         width: 30%;
         box-sizing: border-box;
         .cow {
-            height: 200px;
-            width: 200px;
+            height: 270px;
+            width: 270px;
             border-radius: 50%;
-            border: 4px dotted rgb(126, 124, 125);
+            border: 4px dotted deeppink;
             margin: 10px;
             display: flex;
             justify-content: center;
@@ -219,9 +220,9 @@ button {
             flex-direction: column;
         }
         .sheep {
-            height: 200px;
-            width: 200px;
-            border: 4px dotted rgb(255, 255, 255);
+            height: 270px;
+            width: 270px;
+            border: 4px dotted darkturquoise;
             margin: 10px;
             display: flex;
             justify-content: center;
@@ -229,20 +230,28 @@ button {
             flex-direction: column;
         }
         .horse {
-            height: 200px;
-            width: 200px;
-            border: 4px dotted rgb(164, 27, 45);
+            height: 270px;
+            width: 270px;
+            border: 4px dotted darkorchid;
             margin: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            border-radius: 20px;
         }
+    }
+    input {
+        outline: none;
+        height: 20px;
+        border: none;
+        margin: 5px 0;
+        font-size: 18px;
     }
 }
 
 .buttons-holder {
-    margin: 15px;
+    margin: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
